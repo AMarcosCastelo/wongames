@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 
-import MediaMatch from '.';
+import Button from '.';
 
-describe('<MediaMatch />', () => {
+describe('<Button />', () => {
   it('should render the heading', () => {
-    const { container } = render(<MediaMatch />);
+    const { container } = render(<Button />);
 
     expect(
-      screen.getByRole('heading', { name: /MediaMatch/i }))
+      screen.getByRole('heading', { name: /Button/i }))
         .toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
