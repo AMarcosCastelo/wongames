@@ -1,7 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  /* poppins-300 - latin */
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
