@@ -14,7 +14,7 @@ export const MenuMobile: Story<MenuProps> = (args) => <Menu {...args} />;
 MenuMobile.parameters = {
   layout: 'fullscreen',
   backgrounds: {
-    default: 'dark'
+    default: 'won-dark'
   },
   viewport: {
     defaultViewport: 'mobile1'
