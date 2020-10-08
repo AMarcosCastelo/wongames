@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import Highlight, { HighlightProps } from '.';
+import item from './mock';
 
 export default {
   title: 'Highlight ',
@@ -13,23 +14,11 @@ export const Basic: Story<HighlightProps> = (args) => (
   </div>
 );
 
-Basic.args = {
-  title: "Read Dead it's back",
-  subtitle: "Come see John's new adventures",
-  backgroundImage: '/img/read-dead-img.jpg',
-  buttonLabel: 'Buy now',
-  buttonLink: '/rdr2'
-};
+Basic.args = item;
 
 export const Mobile: Story<HighlightProps> = (args) => <Highlight {...args} />;
 
-Mobile.args = {
-  title: "Read Dead it's back",
-  subtitle: "Come see John's new adventures",
-  backgroundImage: '/img/read-dead-img.jpg',
-  buttonLabel: 'Buy now',
-  buttonLink: '/rdr2'
-};
+Mobile.args = item;
 
 Mobile.parameters = {
   layout: 'fullscreen',
@@ -43,12 +32,8 @@ export const WithFloatImage: Story<HighlightProps> = (args) => (
 );
 
 WithFloatImage.args = {
-  title: "Read Dead it's back",
-  subtitle: "Come see John's new adventures",
-  backgroundImage: '/img/read-dead-img.jpg',
-  floatImage: '/img/float-image.png',
-  buttonLabel: 'Buy now',
-  buttonLink: '/rdr2'
+  ...item,
+  floatImage: '/img/float-image.png'
 };
 
 // WithFloatImageMobile.parameters = {

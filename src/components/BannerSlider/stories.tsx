@@ -1,32 +1,6 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import BannerSlider, { BannerSliderProps } from '.';
-
-const items = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy Death 1',
-    subtitle: '<p>Play the new <strong>Crashlands</strong> season',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
-    title: 'Defy Death 2',
-    subtitle: '<p>Play the new <strong>Crashlands</strong> season',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
-    title: 'Defy Death 3',
-    subtitle: '<p>Play the new <strong>Crashlands</strong> season',
-    buttonLabel: 'Buy Now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling'
-  }
-];
+import items from './mock';
 
 export default {
   title: 'BannerSlider ',
