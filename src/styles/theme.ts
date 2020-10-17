@@ -32,6 +32,10 @@ export default {
     gray: '#8F8F8F',
     darkGray: '#2E2F42'
   },
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
+  },
   spacings: {
     xxsmall: '0.8rem',
     xsmall: '1.6rem',
