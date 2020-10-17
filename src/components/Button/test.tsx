@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart';
 
+import theme from 'styles/theme';
 import Button from '.';
 
 describe('<Button />', () => {
@@ -44,13 +45,30 @@ describe('<Button />', () => {
     });
   });
 
-  it('should render a icon version', () => {
+  it('should render an icon version', () => {
     renderWithTheme(
       <Button icon={<AddShoppingCart data-testid="icon" />}>Buy now</Button>
     );
 
     expect(screen.getByText(/Buy now/i)).toBeInTheDocument();
     expect(screen.getByTestId('icon')).toBeInTheDocument();
+  });
+
+  it('should render a minimal version', () => {
+    renderWithTheme(
+      <Button minimal icon={<AddShoppingCart data-testid="icon" />}>
+        Buy now
+      </Button>
+    );
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      background: 'none',
+      color: theme.colors.primary
+    });
+
+    expect(
+      screen.getByRole('button', { name: /Buy now/i })
+    ).toHaveStyleRule('background', 'none', { modifier: ':hover' });
   });
 
   it('should render Button as a link', () => {
